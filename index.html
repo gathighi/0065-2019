@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Find My Mechanic</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <main role='main'>
+      <div class="js-background background">
+        <div class='user-input'>
+          <section role='region'>
+            <h1 role="banner">Find My Mechanic</h1>
+            <p>Search for automotive repair shops in your area, or any selected area.</p>
+            <button type="submit" class="js-location-near-me">Search close to your location</button>
+            <button type="submit" class="js-location-anywhere anywhere-button">Search any location</button>
+            <div id="userForm" aria-live="assertive"></div>
+          </section>
+        </div>
+      </div>
+      <p id="copyright">Kevin Muiga</p>
+      <div id="map" aria-live="assertive"></div>
+      <div class="js-weather-list" aria-live="assertive"></div>
+      <div class="shop-info"><h2 class="js-scroll" id="scroll">Scroll Down For Shop List</h2>
+        <ul class="js-list-items" aria-live="assertive"></ul>
+      </div>
+      <div class="js-error error" aria-live="assertive"></div>
+      <div id="failure" aria-live="assertive"></div>
+      <div class="try-again">
+        <button class="js-fail-button fail-button">Try Again</button>
+      </div>
+      <div class="search-again">
+        <button class="js-back back-button">Search Again</button>
+      </div>
+      <div class="js-waiting-icon"><img id="waiting-icon" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif"/>
+      </div>
+    </main>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+
+    <script src="index.js"></script>
+  
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBskJAbt6y3jJ-cb4IuRumlwCh-NafTn5A&libraries=places&callback=initMap" async defer></script> 
+  </body>
+</html>
